@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+
+  rpi_monitor:
+    image: sixsq/rpi_monitor
+    restart: always
+    environment:
+      - INTERVAL
+      - METRIC_PREFIX
+      - GRAPHITE_ADDRESS
+      - GRAPHITE_PORT
+    devices:
+      - "/dev/vchiq"
